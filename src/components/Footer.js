@@ -6,10 +6,10 @@ class Footer extends React.Component {
             <div id="footer">
                 <div className="inner">
                     <ul className="icons">
-                        <li><a href="https://www.meetup.com/KansasCityJUG/" className="icon fa-meetup" target="_blank"><span className="label">Meetup</span></a></li>
-                        <li><a href="https://twitter.com/kcjug" className="icon fa-twitter" target="_blank"><span className="label">Twitter</span></a></li>
-                        <li><a href="https://bit.ly/2KZfkLZ" className="icon fa-slack" target="_blank"><span className="label">Slack</span></a></li>
-                        <li><a href="https://github.com/kcjug" className="icon fa-github" target="_blank"><span className="label">Github</span></a></li>
+                        <li><a href="https://www.meetup.com/KansasCityJUG/" className="icon fa-meetup" target="_blank" rel="noopener noreferrer"><span className="label">Meetup</span></a></li>
+                        <li><a href="https://twitter.com/kcjug" className="icon fa-twitter" target="_blank" rel="noopener noreferrer"><span className="label">Twitter</span></a></li>
+                        <li><a href="https://bit.ly/2KZfkLZ" className="icon fa-slack" target="_blank" rel="noopener noreferrer"><span className="label">Slack</span></a></li>
+                        <li><a href="https://github.com/kcjug" className="icon fa-github" target="_blank" rel="noopener noreferrer"><span className="label">Github</span></a></li>
                         <li><a href="mailto:kansascityjug@gmail.com" className="icon fa-envelope-o"><span className="label">Email</span></a></li>
                     </ul>
                     <ul className="copyright">

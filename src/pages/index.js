@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import MeetupEvents from '../components/MeetupEvents'
 // import Lightbox from 'react-images'
 
 class HomeIndex extends React.Component {
@@ -58,6 +59,7 @@ class HomeIndex extends React.Component {
                                 our <a href="https://meetup.com/KansasCityJUG/events">events schedule on meetup.com</a>.
                                 {/* TODO: embed events with https://www.gatsbyjs.org/packages/gatsby-source-meetup/ */}
                             </p>
+                            <MeetupEvents />
                         </div>
                     </section>
 
@@ -86,11 +88,11 @@ class HomeIndex extends React.Component {
                             <p>
                                 Since we're always looking for feedback, take a few minutes and let us know what you think!
                                 <br />
-                                <a href="https://forms.gle/tTuptDfjKqvvnwBq6" target="_blank">Can the schedule better accomodate you?</a>
+                                <a href="https://forms.gle/tTuptDfjKqvvnwBq6" target="_blank" rel="noopener noreferrer">Can the schedule better accomodate you?</a>
                                 <br />
-                                <a href="https://forms.gle/bzCGs8UWia9VpPp59" target="_blank">What things will bring you out to KC JUG?</a>
+                                <a href="https://forms.gle/bzCGs8UWia9VpPp59" target="_blank" rel="noopener noreferrer">What things will bring you out to KC JUG?</a>
                                 <br />
-                                <a href="https://forms.gle/EsPBdoEbMN4WAgjB6" target="_blank">Should we host workshops?</a>
+                                <a href="https://forms.gle/EsPBdoEbMN4WAgjB6" target="_blank" rel="noopener noreferrer">Should we host workshops?</a>
                             </p>
                             <p>
                                 We welcome all other feedback as well. <a href="#contact">Let us know what's on your mind!</a>
@@ -124,19 +126,19 @@ class HomeIndex extends React.Component {
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-meetup"><span className="label">Meetup</span></h3>
-                                        <a href="https://www.meetup.com/KansasCityJUG/" target="_blank">KansasCityJUG</a>
+                                        <a href="https://www.meetup.com/KansasCityJUG/" target="_blank" rel="noopener noreferrer">KansasCityJUG</a>
                                     </li>
                                     <li>
                                         <h3 className="icon fa-twitter"><span className="label">Twitter</span></h3>
-                                        <a href="https://twitter.com/kcjug" target="_blank">@kcjug</a>
+                                        <a href="https://twitter.com/kcjug" target="_blank" rel="noopener noreferrer">@kcjug</a>
                                     </li>
                                     <li>
                                         <h3 className="icon fa-slack"><span className="label">Slack</span></h3>
-                                        <a href="https://bit.ly/2KZfkLZ" target="_blank">kansascityjug.slack.com</a>
+                                        <a href="https://bit.ly/2KZfkLZ" target="_blank" rel="noopener noreferrer">kansascityjug.slack.com</a>
                                     </li>
                                     <li>
                                         <h3 className="icon fa-github"><span className="label">GitHub</span></h3>
-                                        <a href="https://github.com/kcjug" target="_blank">kcjug</a>
+                                        <a href="https://github.com/kcjug" target="_blank" rel="noopener noreferrer">kcjug</a>
                                     </li>
                                     <li>
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>

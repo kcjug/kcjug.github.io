@@ -805,7 +805,7 @@
 		cursor: pointer;
 		display: inline-block;
 		font-weight: _font(weight-bold);
-		height: 3.15em;
+		height: 2.5em;
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
 		min-width: 10em;
@@ -1016,6 +1016,25 @@
 				padding-top: 0;
 				min-height: 90vh;
 			}
+		}
+	}
+
+	.scrolling-wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		overflow-x: auto;
+		align-items: flex-start;
+		-webkit-overflow-scrolling: touch;
+
+		.card {
+			flex-grow: 0;
+			margin: 0.25rem;
+			padding: 0.25rem;
+			border-radius: 1rem;
+			border-style: solid;
+			border-width: 2px;
+			border-color: darkgray;
+			width: 300px;
 		}
 	}
 
