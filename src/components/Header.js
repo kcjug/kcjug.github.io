@@ -8,7 +8,7 @@ class Header extends React.Component {
         return (
             <header id="header">
                 <div className="inner">
-                    <a href="#" className="image avatar"><img src={avatar} alt="KC Duke" /></a>
+                    <a href="#top" className="image avatar"><img src={avatar} alt="KC Duke" /></a>
                     <h2><strong>Kansas City JUG</strong></h2>
                     <br />
                     <h3>Fostering the Java&trade; Community in the <br/>greater Kansas City metro since 2017</h3>
