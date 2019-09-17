@@ -9,6 +9,24 @@ gatsby develop -o
 
 After the page is opened, changes to the source will be reflected in the opened site.
 
+## Develop branch
+
+The main source branch for this repository is the `develop` branch. All code changes should target this branch rather than `master`.
+
+## Master Branch
+
+The `master` branch is for the rendered assets from `develop` to be published as the public site. Once changes have been merged into `develop`, an administrator will need to generate and publish the site. To publish the site, you will need to have `Node.js`, `npm`, `gatsby`, and [`gh-pages-cli`](https://www.npmjs.com/package/gh-pages-cli) installed.
+
+To generate the site, check out the `develop` branch and run
+```bash
+gatsby build
+```
+
+followed by
+```bash
+gh-pages -d public -b master
+```
+
 # Attribution
 
 Site built with [Gatsby](https://www.gatsbyjs.org). From [gatsby-starter-strata](https://github.com/ChangoMan/gatsby-starter-strata).
