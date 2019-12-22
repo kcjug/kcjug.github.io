@@ -27,37 +27,34 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-88f42752a03c36cec82d.js"
+    "url": "webpack-runtime-5ce8c826e5d83cd6f593.js"
   },
   {
-    "url": "commons.a14177f67d751de4a281.css"
+    "url": "commons-e4d1cf937e8afc4814a6.js"
   },
   {
-    "url": "commons-05e54a644daeedcf9e93.js"
+    "url": "app-b5f1e395f5c56f16d6e4.js"
   },
   {
-    "url": "app-983ca260e3467d18f114.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-734f81592f9addfd754c.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-87ef582ba388a83f73c0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0e24afe630374731d4d4d65e368abfce"
+    "revision": "677d43e541002b0a8a4cb1e1f1b071c7"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f0fb716babc942c4e30dec197a6e4faf"
+    "revision": "d274adf0f008ef152ce70a312b04b730"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "4357618742370ef5c182807853ac5051"
+    "revision": "d873529a3b031b13d7d3d5c9a17c53dd"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.NetworkFirst(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
@@ -67,14 +64,84 @@ importScripts(`idb-keyval-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
 
+let lastNavigationRequest = null
+let offlineShellEnabled = true
+
+// prefer standard object syntax to support more browsers
+const MessageAPI = {
+  setPathResources: (event, { path, resources }) => {
+    event.waitUntil(idbKeyval.set(`resources:${path}`, resources))
+  },
+
+  clearPathResources: event => {
+    event.waitUntil(idbKeyval.clear())
+  },
+
+  enableOfflineShell: () => {
+    offlineShellEnabled = true
+  },
+
+  disableOfflineShell: () => {
+    offlineShellEnabled = false
+  },
+}
+
+self.addEventListener(`message`, event => {
+  const { gatsbyApi: api } = event.data
+  if (api) MessageAPI[api](event, event.data)
+})
+
+function handleAPIRequest({ event }) {
+  const { pathname } = new URL(event.request.url)
+
+  const params = pathname.match(/:(.+)/)[1]
+  const data = {}
+
+  if (params.includes(`=`)) {
+    params.split(`&`).forEach(param => {
+      const [key, val] = param.split(`=`)
+      data[key] = val
+    })
+  } else {
+    data.api = params
+  }
+
+  if (MessageAPI[data.api] !== undefined) {
+    MessageAPI[data.api]()
+  }
+
+  if (!data.redirect) {
+    return new Response()
+  }
+
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: lastNavigationRequest,
+    },
+  })
+}
+
 const navigationRoute = new NavigationRoute(async ({ event }) => {
+  // handle API requests separately to normal navigation requests, so do this
+  // check first
+  if (event.request.url.match(/\/.gatsby-plugin-offline:.+/)) {
+    return handleAPIRequest({ event })
+  }
+
+  if (!offlineShellEnabled) {
+    return await fetch(event.request)
+  }
+
+  lastNavigationRequest = event.request.url
+
   let { pathname } = new URL(event.request.url)
   pathname = pathname.replace(new RegExp(`^`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-983ca260e3467d18f114.js`))) {
+  if (!resources || !(await caches.match(`/app-b5f1e395f5c56f16d6e4.js`))) {
     return await fetch(event.request)
   }
 
@@ -94,17 +161,5 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
 
 workbox.routing.registerRoute(navigationRoute)
 
-const messageApi = {
-  setPathResources(event, { path, resources }) {
-    event.waitUntil(idbKeyval.set(`resources:${path}`, resources))
-  },
-
-  clearPathResources(event) {
-    event.waitUntil(idbKeyval.clear())
-  },
-}
-
-self.addEventListener(`message`, event => {
-  const { gatsbyApi } = event.data
-  if (gatsbyApi) messageApi[gatsbyApi](event, event.data)
-})
+// this route is used when performing a non-navigation request (e.g. fetch)
+workbox.routing.registerRoute(/\/.gatsby-plugin-offline:.+/, handleAPIRequest)
