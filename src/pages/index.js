@@ -122,7 +122,7 @@ class HomeIndex extends React.Component {
                             <header className="major">
                                 <h2>Get In Touch with KC JUG!</h2>
                             </header>
-                            <div className="4u 12u$(small)">
+                            <div>
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-meetup"><span className="label">Meetup</span></h3>
@@ -134,7 +134,8 @@ class HomeIndex extends React.Component {
                                     </li>
                                     <li>
                                         <h3 className="icon fa-slack"><span className="label">Slack</span></h3>
-                                        <a href="https://bit.ly/2KZfkLZ" target="_blank" rel="noopener noreferrer">kansascityjug.slack.com</a>
+                                        <a href="https://kansascityjug.slack.com" target="_blank" rel="noopener noreferrer">kansascityjug.slack.com</a> (First&nbsp;time?&nbsp;<a href="https://join.slack.com/t/kansascityjug/shared_invite/enQtNzQwNTA3OTMzMzE3LWYyZDNkNmE1MDdhNjQ5MWY2Y2RhZmQzMjA5MGU0ODE2NDM1OTRmOWFhOGFhMmEyYzBkZGJmZGE1YmZiZTg0NTY
+" target="_blank" rel="noopener noreferrer">Join&nbsp;here!</a>)
                                     </li>
                                     <li>
                                         <h3 className="icon fa-github"><span className="label">GitHub</span></h3>
