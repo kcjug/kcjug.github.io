@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Brandon Heck",
   "dependencies": {
-    "gatsby": "^2.18.16",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.8.21",
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-offline": "^3.0.6",
