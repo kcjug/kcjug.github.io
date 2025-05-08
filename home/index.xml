@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homes on</title><link>https://kcjug.github.io/home/</link><description>Recent content in Homes on</description><generator>Hugo</generator><language>en</language><atom:link href="https://kcjug.github.io/home/index.xml" rel="self" type="application/rss+xml"/><item><title>KCJUG</title><link>https://kcjug.github.io/home/home/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kcjug.github.io/home/home/</guid><description>&lt;section id="showcase" class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+ &lt;div id="main-content">
+ 
+
+
+ 
+
+ &lt;div class="showcase-section row flex-column-reverse flex-md-row rad-fade-down rad-waiting rad-animate">
+ &lt;div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+ &lt;h1 class="display-1">
+ Kansas City Java User Group
+ &lt;/h1>
+ &lt;h2 class="display-5">
+ &lt;span>Get involved&lt;/span>
+ &lt;/h2>
+ &lt;div class="lead">
+ We encourage the Kansas City JUG community to get involved! There are several outlets which community members can use to interact with the rest of the community. Check us out below!
+ &lt;/div>
+ 
+ &lt;/div>
+ &lt;div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profile-image">
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+ &lt;picture class="">
+ 
+ 
+
+ &lt;source srcset="https://kcjug.github.io/images/kcduke_hu_c32add41139bc72d.webp 1x, https://kcjug.github.io/images/kcduke_hu_a9ef41f6ce9066d0.webp 2x" type="image/webp" />
+ &lt;source srcset="https://kcjug.github.io/images/kcduke_hu_5e711764e5cab088.png 1x, https://kcjug.github.io/images/kcduke_hu_8d169105915da4aa.png 2x" type="image/png">
+
+ &lt;img
+ width="218"
+ class="lozad img-responsive "
+ data-src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+ alt=''
+ src="https://kcjug.github.io/images/kcduke_hu_5e711764e5cab088.png"
+ />
+ &lt;/picture>
+
+
+
+
+ &lt;/div>
+ &lt;div class="col-12 inner-content">
+ 
+
+
+
+
+
+&lt;div class="container">
+ &lt;div class="row platform-links shortcode">
+ &lt;div class="col-12"> 
+ 
+ 
+ &lt;a
+ href="https://www.meetup.com/KansasCityJUG/"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="meetup"
+ >&lt;i class="icon-meetup">&lt;/i>
+ &lt;/a>
+
+ 
+ 
+ &lt;a
+ href="https://x.com/kcjug"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="x-twitter"
+ >&lt;i class="icon-x-twitter">&lt;/i>
+ &lt;/a>
+
+ 
+ 
+ &lt;a
+ href="https://github.com/kcjug"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="square-github"
+ >&lt;i class="icon-square-github">&lt;/i>
+ &lt;/a>
+
+ 
+ 
+ &lt;a
+ href="mailto:kcjug@gmail.com"
+ target="_blank"
+ rel="noopener noreferrer"
+ aria-label="email"
+ >&lt;i class="icon-email">&lt;/i>
+ &lt;/a>
+
+&lt;/div>
+ &lt;/div>
+&lt;/div>
+
+
+ &lt;/div>
+ 
+
+ &lt;/div>
+
+
+ &lt;div class="row platform-links">
+ &lt;div class="col-12">&lt;/div>
+ &lt;/div>
+ &lt;/div>
+ 
+&lt;/section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+&lt;section class="section section--border-bottom rad-animation-group section--padding">
+ &lt;div class="container">
+ &lt;div class="row rad-fade-down">
+ &lt;div class="col-12">
+ 
+ &lt;h2 class="section__title">We have a passion for all things Java™&lt;/h2>
+ 
+ 
+ &lt;div class="text-section__content">
+ &lt;p>Whether you are a dedicated professional or a coding hobbyist, novice developer or seasoned
+engineer, programming student or lifelong learner, the Kansas City JUG is dedicated to bringing
+content to the community about all things on the JVM.&lt;/p></description></item></channel></rss>
