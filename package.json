@@ -1,48 +1,24 @@
 {
-  "name": "kcjug-site",
-  "description": "Kansas City JUG Landing Site",
-  "version": "1.0.0",
-  "author": "Brandon Heck",
-  "dependencies": {
-    "gatsby": "^2.18.16",
-    "gatsby-cli": "^2.8.21",
-    "gatsby-plugin-manifest": "^2.2.16",
-    "gatsby-plugin-offline": "^3.0.6",
-    "gatsby-plugin-react-helmet": "^3.1.7",
-    "gatsby-plugin-sass": "^2.1.14",
-    "gatsby-source-meetup": "^1.0.0",
-    "node-sass": "^4.12.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "string-strip-html": "^4.2.0"
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@zetxek/adritian-theme-helper": "github.com/zetxek/adritian-free-hugo-theme",
+      "autoprefixer": "github.com/zetxek/adritian-free-hugo-theme",
+      "bootstrap": "github.com/zetxek/adritian-free-hugo-theme",
+      "bootstrap-print-css": "github.com/zetxek/adritian-free-hugo-theme",
+      "postcss": "github.com/zetxek/adritian-free-hugo-theme",
+      "postcss-cli": "github.com/zetxek/adritian-free-hugo-theme"
+    }
   },
-  "keywords": [
-    "kcjug",
-    "kansas city java",
-    "kcjava",
-    "kc java",
-    "meetup",
-    "kansas city meetup",
-    "java",
-    "java meetup",
-    "java user group",
-    "java users group"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "gh-pages": "^2.1.1"
+    "@zetxek/adritian-theme-helper": "^1.0.3",
+    "autoprefixer": "^10.4.17",
+    "bootstrap": "^5.3.3",
+    "bootstrap-print-css": "^1.0.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kcjug/kcjug.github.io"
-  }
+  "name": "kcjug.github.io",
+  "version": "0.1.0"
 }

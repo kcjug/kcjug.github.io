@@ -1,0 +1,55 @@
+## Meta tags
+- id: "meta_title"
+  translation: "KCJUG"
+- id: "meta_description"
+  translation: "The Kansas City Java User Group"
+- id: "meta_keywords"
+  translation: "java, kc, community, meetup"
+- id: "meta_author"
+  translation: "KCJUG"
+- id: "meta_image"
+  translation: "/img/general/og-image.jpg"
+
+## Header
+
+- id: "logo_alt"
+  translation: "KCJUG"
+
+- id: "logo_text1"
+  translation: "KC"
+
+- id: "logo_text2"
+  translation: "JUG"
+
+## General
+- id: "skipToMainContent"
+  translation: "Skip to main content"
+
+- id: "toggle_navigation"
+  translation: "Toggle navigation"
+
+## Footer
+- id: "footer_notice"
+  translation: "Kansas City Java User Group."
+
+- id: "language"
+  translation: "Language"
+
+- id: "toggle_theme"
+  translation: "Toggle theme"
+
+## Homepage head title
+- id: "head_title"
+  translation: "KCJUG"
+
+- id: "head_description"
+  translation: "Kansas City Java User Group"
+
+## 404 Page
+- id: "404_title"
+  translation: "Page not found"
+- id: "404_description"  
+  translation: "Sorry, but the page you were looking for could not be found."
+- id: "404_button"
+  translation: "Back to homepage"
+

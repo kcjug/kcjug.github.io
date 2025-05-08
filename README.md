@@ -1,35 +1,25 @@
 # Developer Notes
 
-This site was built using a site template framework, [Gatsby](https://www.gatsbyjs.org). Gatsby requires an installation of [Node.js and npm](https://www.npmjs.com/get-npm). To get started with Gatsby, the [Gatsby quick-start guide](https://www.gatsbyjs.org/docs/quick-start/) will give a great introduction for how to installing Gatsby and run the site locally in development mode.
+This site is built with [Hugo](https://gohugo.io/). To run the site locally, install Hugo and run the following commands:
 
-Once Gatsby is installed, navigate to the base directory of the project. From that directory, the site can be generated and opened in the default web browser with:
 ```bash
-gatsby develop -o
+npm install
+hugo server
 ```
-
-After the page is opened, changes to the source will be reflected in the opened site.
 
 ## Develop branch
 
 The main source branch for this repository is the `develop` branch. All code changes should target this branch rather than `master`.
 
+## Dynamic Content
+
+The site currently builds content into the site by pulling the RSS feed of the [KCJUG Meetup page](https://www.meetup.com/kansascityjug/events/rss). Note, this site can then be scheduled to rebuild weekly or monthly if you wish to automatically build in new content. Content was not pulled client-side due to CORS policy.
+
 ## Master Branch
 
-The `master` branch is for the rendered assets from `develop` to be published as the public site. Once changes have been merged into `develop`, an administrator will need to generate and publish the site. To publish the site, you will need to have `Node.js`, `npm`, `gatsby`, and [`gh-pages-cli`](https://www.npmjs.com/package/gh-pages-cli) installed.
-
-To generate the site, check out the `develop` branch and run
-```bash
-gatsby build
-```
-
-followed by
-```bash
-gh-pages -d public -b master
-```
+The `master` branch is for the rendered assets from `develop` to be published as the public site. Site will be published to `master` branch through the [GitHub Actions defined](.github/workflows/gh-pages.yml).
 
 # Attribution
-
-Site built with [Gatsby](https://www.gatsbyjs.org). From [gatsby-starter-strata](https://github.com/ChangoMan/gatsby-starter-strata).
 
 Background (header.jpg) sourced from Wikimedia Commons, from the NOAA Photo Library. Licensed under the Creative Commons [Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/deed.en) license.
 

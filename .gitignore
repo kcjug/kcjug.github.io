@@ -1,9 +1,9 @@
 # Project dependencies
 .cache
 node_modules
-yarn-error.log
-yarn.lock
+hugo_stats.json
 
 # Build directory
 /public
 .DS_Store
+/resources

@@ -1,0 +1,15 @@
+{{ if .Get "url" }}
+  {{ $url := .Get "url" }}
+  {{ with resources.GetRemote $url | transform.Unmarshal }}
+  <div class="card" style="width: 54rem;">
+    <h5 class="card-header">Upcoming</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{ .channel.item.title }}</h5>
+      <p class="card-text">{{ .channel.item.description | safeHTML }}</p>
+      <a href="{{ .channel.item.link }}" class="btn btn-primary">Learn more</a>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+
