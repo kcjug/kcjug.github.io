@@ -149,16 +149,12 @@ URL = "js/library/fontfaceobserver.js"
 [[params.plugins.scss]]
 URL = "scss/adritian.scss"
 
-
 # theme/color style 
 [params.colorTheme]
-
-## the following configuration would disable automatic theme selection
-#  [params.colorTheme.auto]
-#    disable = true
-#  [params.colorTheme.forced]
-#    theme = "dark"
-
+  [params.colorTheme.auto]
+     disable = true
+  [params.colorTheme.forced]
+    theme = "light"
 
 [params.colorTheme.selector.disable]
 footer = true
