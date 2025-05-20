@@ -1,6 +1,9 @@
 name: GitHub Pages
 
 on:
+  schedule:
+    # Setting a schedule to redeploy every week to catch newer sessions from Meetup
+    - cron: "0 7 * * FRI"
   push:
     branches:
       - develop  # Set a branch to deploy
